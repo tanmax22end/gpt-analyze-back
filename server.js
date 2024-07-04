@@ -49,7 +49,7 @@ todoRoutes.route('/add').post(async function (req, res) {
             // Step 2: Transcribe the video using the OpenAI AP
 
             const configuration = new Configuration({
-                apiKey: "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",
+                apiKey: process.env.API_KEY,
             });
             const openai = new OpenAIApi(configuration);
 
